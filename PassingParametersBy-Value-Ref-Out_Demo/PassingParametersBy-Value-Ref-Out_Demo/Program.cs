@@ -14,14 +14,15 @@ namespace PassingParametersBy_Value_Ref_Out_Demo
 
 
 
-            /*
-                                                            Ref Parameters
+            #region Ref Parameters
+                   
                 Ref is a keyword in C# which is used for passing the value types by reference. 
                 Or we can say that if any changes made in this argument in the method will reflect in that variable when the control return to the calling method.
                 The ref parameter does not pass the property. 
                 In ref parameters, it is necessary that the parameters should initialize before it pass to ref. 
                 The passing of value through the ref parameter is useful when the called method also needs to change the value of the passed parameter. 
-            */
+                    
+            #endregion
 
             // Assigning value 
             string val = "Dog";
@@ -33,14 +34,15 @@ namespace PassingParametersBy_Value_Ref_Out_Demo
             Console.WriteLine(val);
 
 
-            /*
-                                                    Out Parameters
+            #region Out Parameters
+                
                 The out is a keyword in C# which is used for the passing the arguments to methods as a reference type. 
                 It is generally used when a method returns multiple values. 
                 The out parameter does not pass the property. 
                 It is not necessary to initialize parameters before it passes to out.
                 The declaring of parameter throughout parameter is useful when a method returns multiple values.
-            */
+            
+            #endregion
 
             // Creating variable 
             // without assigning value 
@@ -56,6 +58,8 @@ namespace PassingParametersBy_Value_Ref_Out_Demo
 
         }
 
+        #region Methods
+        
         static void CompareValue(ref string val1)
         {
             // Compare the value 
@@ -76,5 +80,7 @@ namespace PassingParametersBy_Value_Ref_Out_Demo
             num = 40;
             num += num;
         }
+        
+        #endrgion
     }
 }
