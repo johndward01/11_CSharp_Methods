@@ -4,17 +4,16 @@ using System.Collections.Generic;
 namespace Methods_Demo
 {
     class Program
-    {        
+    {
         public static void Main(string[] args)
         {
-            Console.Write("Please enter the first number: ");
-            Console.Write("Please enter the second number: ");
-            var num1 = int.Parse(Console.ReadLine());
-            var num2 = int.Parse(Console.ReadLine());
-
-            var answer = Add(num1, num2);
+            bool answer = ReturnTrue();
             Console.WriteLine(answer);
+        }
 
+        public static void SayHello(string firstName, string lastName)
+        {
+            Console.WriteLine($"Hello, {firstName} {lastName}");
         }
 
         public static int Add(int x, int y)
@@ -22,5 +21,11 @@ namespace Methods_Demo
             return x + y;
         }
 
-    }
+        public static bool ReturnTrue()
+        {
+            return true;
+        }
+
+
+    }    
 }
